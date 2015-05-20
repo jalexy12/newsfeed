@@ -1,2 +1,23 @@
-<h1>Newsfeed#index</h1>
-<p>Find me in app/views/newsfeed/index.html.erb</p>
+<div class="container">
+  <div class="newstatus row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <%= simple_form_for(@post, html: { class: 'form-horizontal' }) do |f| %>
+        <%= f.input :status, label: false %>
+        <div class="button-wrapper text-center">
+          <%= f.button :submit, value: "Update your status" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="row statusupdate text-center">
+     <div class="col-sm-12">
+       <div class="col-sm-4">
+       	 <img src="https://placeimg.com/150/150/people" class="profile-image"><br>
+       	 <small>Bob Smith</small>
+       </div>
+       <div class="col-sm-4">
+         <h4 class="status">Hello world</h4>
+       </div>  
+     </div>
+  </div>
+</div>
